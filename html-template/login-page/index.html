@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-page-container w-full h-full">
+        <div class="login-back-area">
+            <img class="login-back-area-image w-full h-full" src="./assets/images/pattern-2.avif">
+        </div>
+        <div class="login-front-area d-flex f-row v-center h-center">
+            <div class="login-content-area p-20 b-r-15 bg-white o-hidden">
+                <h3 class="login-heading t-uppercase f-w-600">
+                    Form
+                </h3>
+
+                <form class="form-content d-flex f-column">
+                    <fieldset class="c-initial">
+                     <legend class="t-capitalize">sign up/ login</legend>
+                     <label class="form-label t-capitalize" for="fname">First name:</label>
+                     <input type="text" id="fname" name="fname"><br><br>
+                     <label class="form-label t-capitalize" for="lname">Last name:</label>
+                     <input type="text" id="lname" name="lname"><br><br>
+                     <label class="form-label t-capitalize" for="email">Email:</label>
+                     <input type="email" id="email" name="email"><br><br>
+                     <label class="form-label t-capitalize" for="birthday">Birthday:</label>
+                     <input type="date" id="birthday" name="birthday"><br><br>
+                     <hr>
+                     <label class="form-label t-capitalize" for="username">username:</label>
+                     <input type="text" id="username" name="username"><br><br>
+                     <label class="form-label t-capitalize" for="password">Password:</label>
+                     <input type="password" id="password" name="password"><br><br>
+                     <div class="d-flex">
+                        <span class="f-1"></span>
+                        <span>
+                            <input class="input-submit bg-white t-black c-pointer" type="submit" value="Submit">
+                        </span>
+                     </div>
+                    </fieldset> 
+                   </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
