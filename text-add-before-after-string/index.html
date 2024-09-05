@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .showText {
+      background: yellow;
+      color: black;
+      font-size: 30px;
+      font-weight: 600;
+    }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <td>prefix</td>
+        <td><input type="text" id="beforeText" /></td>
+      </tr>
+
+      <tr>
+        <td>suffix</td>
+        <td><input type="text" id="afterText" /></td>
+      </tr>
+
+      <tr>
+        <td>between connector</td>
+        <td><input type="text" id="middleConnect" /></td>
+      </tr>
+
+      <tr>
+        <td>middle content</td>
+        <td><input type="text" id="contentText" onkeyup="getFormat()" /></td>
+      </tr>
+
+      <tr>
+        <td>.</td>
+      </tr>
+
+      <tr>
+        <td>output:-</td>
+        <td>
+          <span class="showText" id="showText" onclick="copyText()"></span>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      var beforeText, afterText, contentText, showText, fullText, middleConnect;
+
+      function getAllValue() {
+        beforeText = document.getElementById("beforeText").value;
+        afterText = document.getElementById("afterText").value;
+        contentText = document.getElementById("contentText").value;
+        contentText = document.getElementById("contentText").value;
+        showText = document.getElementById("showText");
+        middleConnect = document.getElementById("middleConnect").value;
+      }
+
+      function getFormat() {
+        getAllValue();
+        showText.innerHTML =
+          beforeText + middleConnect + contentText + middleConnect + afterText;
+      }
+
+      function copyText() {
+        const textCopy = showText.innerHTML;
+        navigator.clipboard.writeText(textCopy);
+        alert(`copied text:- ${showText.innerHTML}`);
+      }
+    </script>
+  </body>
+</html>

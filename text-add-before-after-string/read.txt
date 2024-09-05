@@ -1,0 +1,7 @@
+version 1
+
+prefix suffix connector
+
+version 2
+
+sentence space replaced as - or any symbol
