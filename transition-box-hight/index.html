@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: aqua;
+        width: 200px;
+        height: 100px;
+
+        /* transition: height 3000ms, display 6000ms; */
+
+        /*****
+        *** display none cant use here
+        *** display: none stops any visible transition or animation because the element is removed from the rendering tree
+        *****/
+
+        transition: height 3000ms ease;
+
+        /* &:hover {
+          height: 200px;
+          display: none;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <br /><br />
+    <button onclick="window.location.reload()" style="float: right">
+      refresh
+    </button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log("jquery ready");
+        $(".box").click(function () {
+          $(this).css("height", "0"); // Start the height transition
+          setTimeout(() => {
+            $(this).css("display", "none"); // Apply display: none after transition ends
+          }, 3000);
+        });
+      });
+    </script>
+  </body>
+</html>
